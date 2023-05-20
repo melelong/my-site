@@ -1,0 +1,23 @@
+// 提供各种混合样式
+.self-center(@size: 100%, @type: absolute) {
+  position: @type;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(@size);
+}
+
+.self-fill(@type: absolute) {
+  position: @type;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.goBeyond(@num: 1) {
+  -webkit-line-clamp: @num;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
